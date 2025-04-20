@@ -10,6 +10,7 @@ import {
   TimelineContent, TimelineDot
 } from '@mui/lab';
 import { Typography, Paper } from '@mui/material';
+import { TimelineSection } from './components/TimelineSection';
 
 const languages = [
   { icon: SiC, label: 'C' },
@@ -99,93 +100,31 @@ export default async function Home() {
           <h3 className="text-3xl font-extrabold mb-6 border-b-2 border-black pb-2">Skills</h3>
 
           <div className="space-y-12">
-            {/* Programming Languages */}
-            <div>
-              <h4 className="text-xl font-semibold mb-4 border-l-4 border-black pl-2">Programming Languages</h4>
-              <div className="flex flex-wrap gap-6">
-                {languages.map(({ icon: Icon, label }, i) => (
-                  <div key={i} className="flex flex-col items-center text-center w-24">
-                    <Icon size={36} />
-                    <span className="text-sm font-semibold text-[#333] mt-2">{label}</span>
+            {[{ title: 'Programming Languages', items: languages },
+              { title: 'Frameworks', items: frameworks },
+              { title: 'Databases & Infra', items: infra },
+              { title: 'Tools', items: tools }].map(({ title, items }) => (
+                <div key={title}>
+                  <h4 className="text-xl font-semibold mb-4 border-l-4 border-black pl-2">{title}</h4>
+                  <div className="flex flex-wrap gap-6">
+                    {items.map(({ icon: Icon, label }, i) => (
+                      <div key={i} className="flex flex-col items-center text-center w-24">
+                        <Icon size={36} />
+                        <span className="text-sm font-semibold text-[#333] mt-2">{label}</span>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Frameworks */}
-            <div>
-              <h4 className="text-xl font-semibold mb-4 border-l-4 border-black pl-2">Frameworks</h4>
-              <div className="flex flex-wrap gap-6">
-                {frameworks.map(({ icon: Icon, label }, i) => (
-                  <div key={i} className="flex flex-col items-center text-center w-24">
-                    <Icon size={36} />
-                    <span className="text-sm font-semibold text-[#333] mt-2">{label}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Databases & Infra */}
-            <div>
-              <h4 className="text-xl font-semibold mb-4 border-l-4 border-black pl-2">Databases & Infra</h4>
-              <div className="flex flex-wrap gap-6">
-                {infra.map(({ icon: Icon, label }, i) => (
-                  <div key={i} className="flex flex-col items-center text-center w-24">
-                    <Icon size={36} />
-                    <span className="text-sm font-semibold text-[#333] mt-2">{label}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Tools */}
-            <div>
-              <h4 className="text-xl font-semibold mb-4 border-l-4 border-black pl-2">Tools</h4>
-              <div className="flex flex-wrap gap-6">
-                {tools.map(({ icon: Icon, label }, i) => (
-                  <div key={i} className="flex flex-col items-center text-center w-24">
-                    <Icon size={36} />
-                    <span className="text-sm font-semibold text-[#333] mt-2">{label}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+                </div>
+              ))}
           </div>
         </section>
 
         {/* Experience */}
         <section id="experience" className="my-16">
-          <h3 className="text-3xl font-extrabold mb-6 border-b-2 border-black pb-2">Experience & Career</h3>
-          <Timeline position="alternate">
-            {experience.map((item, i, arr) => (
-              <TimelineItem key={item.date}>
-                <TimelineSeparator>
-                  <TimelineDot sx={{ bgcolor: '#222' }} />
-                  {i !== arr.length - 1 && <TimelineConnector />}
-                </TimelineSeparator>
-                <TimelineContent sx={{ py: 2 }}>
-                  <Typography variant="body2" color="textSecondary" sx={{ mb: 1 }}>{item.date}</Typography>
-                  <Paper
-                    elevation={1}
-                    sx={{
-                      p: 2,
-                      bgcolor: '#fff',
-                      border: '1.5px solid #ccc',
-                      borderRadius: 2,
-                      transition: 'all 0.3s ease',
-                      '&:hover': {
-                        boxShadow: 6,
-                        transform: 'translateY(-4px)',
-                      },
-                    }}
-                  >
-                    <Typography variant="h6" sx={{ mb: 1 }}>{item.title}</Typography>
-                    <Typography variant="body2" color="text.secondary">{item.content}</Typography>
-                  </Paper>
-                </TimelineContent>
-              </TimelineItem>
-            ))}
-          </Timeline>
+          <h3 className="text-3xl font-extrabold mb-6 border-b-2 border-black pb-2">
+            Experience & Career
+          </h3>
+          <TimelineSection experience={experience} />
         </section>
 
         {/* Footer */}
