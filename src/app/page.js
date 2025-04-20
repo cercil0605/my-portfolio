@@ -7,7 +7,8 @@ import {
   TimelineSeparator,
   TimelineConnector,
   TimelineContent,
-  TimelineDot
+  TimelineDot,
+  TimelineOppositeContent
 } from '@mui/lab';
 import { Typography, Paper } from '@mui/material';
 
@@ -174,39 +175,16 @@ export default async function Home() {
         <section id="experience" className="my-16">
           <h3 className="text-3xl font-semibold mb-8 border-b pb-2">Experience & Career</h3>
           <Timeline position="alternate">
-            {experience.map((item, i) => (
+            {experience.map((item, i, arr) => (
               <TimelineItem key={item.date}>
-                {item.side === 'left' && (
-                  <TimelineOppositeContent sx={{ pr: 2 }}>
-                    <Typography variant="body2" color="text.secondary">
-                      {item.date}
-                    </Typography>
-                  </TimelineOppositeContent>
-                )}
                 <TimelineSeparator>
                   <TimelineDot sx={{ bgcolor: '#3b82f6' }} />
-                  {i !== experience.length - 1 && <TimelineConnector />}
+                  {i !== arr.length - 1 && <TimelineConnector />}
                 </TimelineSeparator>
+
                 <TimelineContent sx={{ py: 2 }}>
-                  {item.side === 'right' && (
-                    <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
-                      {item.date}
-                    </Typography>
-                  )}
-                  <Paper
-                    elevation={0}
-                    sx={{
-                      p: 3,
-                      border: '1px solid #e5e7eb',
-                      borderRadius: 2,
-                      boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
-                      transition: 'box-shadow 0.3s ease, transform 0.3s ease',
-                      '&:hover': {
-                        boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
-                        transform: 'translateY(-2px)',
-                      },
-                    }}
-                  >
+                  <Typography variant="body2" color="textSecondary" sx={{ mb: 1 }}>{item.date}</Typography>
+                  <Paper elevation={1} sx={{ p: 2, bgcolor: '#ffffff' }}>
                     <Typography variant="h6" sx={{ mb: 1 }}>{item.title}</Typography>
                     <Typography variant="body2" color="text.secondary">{item.content}</Typography>
                   </Paper>
