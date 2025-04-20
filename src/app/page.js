@@ -11,7 +11,6 @@ import {
 } from '@mui/lab';
 import { Typography, Paper } from '@mui/material';
 
-// ラベル付きアイコン定義
 const languages = [
   { icon: SiC, label: 'C' },
   { icon: SiPython, label: 'Python' },
@@ -58,7 +57,7 @@ export default async function Home() {
       <header className="sticky top-0 bg-white shadow z-10">
         <div className="max-w-4xl mx-auto flex items-center justify-between py-4 px-6">
           <h1 className="text-2xl font-black tracking-tight">Keisuke Shibuya</h1>
-          <nav className="space-x-6 text-lg">
+          <nav className="hidden sm:flex space-x-6 text-lg">
             <a href="#about" className="hover:text-black transition">About</a>
             <a href="#education" className="hover:text-black transition">Education</a>
             <a href="#skills" className="hover:text-black transition">Skills</a>
@@ -68,7 +67,6 @@ export default async function Home() {
         </div>
       </header>
 
-      {/* Main */}
       <main className="max-w-4xl mx-auto space-y-20 py-12 px-6">
         {/* About */}
         <section id="about" className="text-center space-y-4">
@@ -95,6 +93,7 @@ export default async function Home() {
             </div>
           </div>
         </section>
+
         {/* Skills */}
         <section id="skills">
           <h3 className="text-3xl font-extrabold mb-6 border-b-2 border-black pb-2">Skills</h3>
@@ -154,7 +153,6 @@ export default async function Home() {
           </div>
         </section>
 
-
         {/* Experience */}
         <section id="experience" className="my-16">
           <h3 className="text-3xl font-extrabold mb-6 border-b-2 border-black pb-2">Experience & Career</h3>
@@ -189,6 +187,7 @@ export default async function Home() {
             ))}
           </Timeline>
         </section>
+
         {/* Footer */}
         <section id="contact" className="text-center pt-12 text-[#555]">
           <p>© 2025 Keisuke Shibuya</p>
