@@ -184,7 +184,23 @@ export default async function Home() {
 
                 <TimelineContent sx={{ py: 2 }}>
                   <Typography variant="body2" color="textSecondary" sx={{ mb: 1 }}>{item.date}</Typography>
-                  <Paper elevation={1} sx={{ p: 2, bgcolor: '#ffffff' }}>
+                  <Paper
+                      elevation={1}
+                      sx={{
+                        p: 2,
+                        bgcolor: '#ffffff',
+                        ml: 0,
+                        textAlign: 'left',
+                        border: '2px solid #e5e7eb', // ← 枠線追加（太め）
+                        borderRadius: 2,
+                        transition: 'all 0.3s ease',
+                        '&:hover': {
+                          boxShadow: 6,
+                          transform: 'translateY(-4px)',
+                        },
+                      }}
+                    
+                    >
                     <Typography variant="h6" sx={{ mb: 1 }}>{item.title}</Typography>
                     <Typography variant="body2" color="text.secondary">{item.content}</Typography>
                   </Paper>
