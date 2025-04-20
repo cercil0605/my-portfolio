@@ -5,11 +5,6 @@ import {
   SiPostgresql, SiSupabase, SiAmazon, SiCloudflare, SiDocker, SiSqlite,
   SiSqlalchemy, SiGithub, SiRubyonrails, SiRubysinatra, SiGithubactions, SiRaspberrypi
 } from 'react-icons/si';
-import {
-  Timeline, TimelineItem, TimelineSeparator, TimelineConnector,
-  TimelineContent, TimelineDot
-} from '@mui/lab';
-import { Typography, Paper } from '@mui/material';
 import { TimelineSection } from './components/TimelineSection';
 
 const languages = [

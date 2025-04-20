@@ -4,9 +4,17 @@ import {
   Timeline, TimelineItem, TimelineSeparator, TimelineConnector,
   TimelineContent, TimelineDot
 } from '@mui/lab';
-import { Typography, Paper } from '@mui/material';
+import { Typography, Paper, useMediaQuery, useTheme, Box } from '@mui/material';
+import { MobileCardTimeline } from './MobileCardTimeline';
 
 export function TimelineSection({ experience }) {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+  if (isMobile) {
+    return <MobileCardTimeline experience={experience} />;
+  }
+
   return (
     <Timeline position="alternate">
       {experience.map((item, i, arr) => (
