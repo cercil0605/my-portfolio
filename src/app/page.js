@@ -1,6 +1,15 @@
 // pages/index.js
 import Head from 'next/head'
 import { SiC, SiPython, SiRuby, SiGo, SiReact, SiVuedotjs, SiMysql, SiPostgresql, SiSupabase, SiAmazon, SiCloudflare, SiDocker } from 'react-icons/si'
+import {
+  Timeline,
+  TimelineItem,
+  TimelineSeparator,
+  TimelineConnector,
+  TimelineContent,
+  TimelineDot
+} from '@mui/lab';
+import { Typography, Paper } from '@mui/material';
 
 export default function Home() {
   return (
@@ -130,71 +139,56 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Experience Timeline */}
-        <section id="experience">
-          <h3 className="text-3xl font-semibold mb-6 border-b pb-2">Experience & Career</h3>
-          <div className="space-y-8">
-            {/* Item 1 */}
-            <div className="flex items-start">
-              <div className="flex flex-col items-center">
-                <div className="w-4 h-4 bg-blue-600 rounded-full mt-1"></div>
-                <div className="flex-1 w-px bg-gray-200 mt-1"></div>
-              </div>
-              <div className="ml-6">
-                <time className="text-blue-600 font-semibold">2023.02</time>
-                <h4 className="mt-1 text-lg font-medium">PR TIMES HACKATHON</h4>
-                <p className="mt-1">3日間でDreamSinkを開発 (Flask, PostgreSQL)。<br/>仕様書作成・要件定義を主導。</p>
-              </div>
-            </div>
-            {/* Item 2 */}
-            <div className="flex items-start">
-              <div className="flex flex-col items-center">
-                <div className="w-4 h-4 bg-blue-600 rounded-full mt-1"></div>
-                <div className="flex-1 w-px bg-gray-200 mt-1"></div>
-              </div>
-              <div className="ml-6">
-                <time className="text-blue-600 font-semibold">2023.04</time>
-                <h4 className="mt-1 text-lg font-medium">チーム開発 継続</h4>
-                <p className="mt-1">DreamSinkの機能拡張、継続開発、<br/>デプロイ環境構築。</p>
-              </div>
-            </div>
-            {/* Item 3 */}
-            <div className="flex items-start">
-              <div className="flex flex-col items-center">
-                <div className="w-4 h-4 bg-blue-600 rounded-full mt-1"></div>
-              </div>
-              <div className="ml-6">
-                <time className="text-blue-600 font-semibold">2024.09</time>
-                <h4 className="mt-1 text-lg font-medium">ShinBizForum 設立</h4>
-                <p className="mt-1">学生間で互いを刺激し合うコミュニティ運営、<br/>勉強会・活動を定期開催。</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <section id="experience" className="my-16">
+          <h3 className="text-3xl font-semibold mb-8 border-b pb-2">Experience & Career</h3>
+          <Timeline align="left">
+            {[
+              {
+                date: "2023.02",
+                title: "PR TIMES HACKATHON",
+                content: "3日間でDreamSinkを開発 (Flask, PostgreSQL)。仕様書作成・要件定義を主導。"
+              },
+              {
+                date: "2023.04",
+                title: "チーム開発 継続",
+                content: "DreamSinkの機能拡張、継続開発、デプロイ環境構築。"
+              },
+              {
+                date: "2024.09",
+                title: "ShinBizForum 設立",
+                content: "学生間で互いを刺激し合うコミュニティ運営、勉強会・活動を定期開催。"
+              }
+            ].map((item, i, arr) => (
+              <TimelineItem key={item.date}>
+                <TimelineSeparator>
+                  <TimelineDot sx={{ bgcolor: '#3b82f6' }} />
+                  {i !== arr.length - 1 && <TimelineConnector />}
+                </TimelineSeparator>
 
-        {/* Projects */}
-        <section id="projects">
-          <h3 className="text-3xl font-semibold mb-6 border-b pb-2">Projects</h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="p-6 border rounded-lg hover:shadow-lg transition">
-              <h4 className="text-xl font-medium mb-2">大学施設向け予約システム</h4>
-              <ul className="list-disc list-inside space-y-1">
-                <li>卒業研究テーマで開発</li>
-                <li>オンラインで予約手続きを完結</li>
-                <li>フィードバック反映、リリース予定</li>
-              </ul>
-            </div>
-            <div className="p-6 border rounded-lg hover:shadow-lg transition">
-              <h4 className="text-xl font-medium mb-2">ZoomURL 自動生成ジェネレータ</h4>
-              <ul className="list-disc list-inside space-y-1">
-                <li>Rails + React で制作</li>
-                <li>オンライン授業のURL生成を自動化</li>
-                <li>CI/CD構築、Zoom API アプリ申請予定</li>
-              </ul>
-            </div>
-          </div>
+                <TimelineContent sx={{ ml: 2, py: 2 }}>
+                  <Typography variant="body2" color="textSecondary" sx={{ mb: 1 }}>
+                    {item.date}
+                  </Typography>
+                  <Paper
+                    elevation={1}
+                    sx={{
+                      p: 3,
+                      minHeight: '120px',
+                      width: '100%',
+                      maxWidth: '480px',
+                      bgcolor: '#fff',
+                      borderRadius: 2,
+                      boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.05)'
+                    }}
+                  >
+                    <Typography variant="h6" sx={{ mb: 1 }}>{item.title}</Typography>
+                    <Typography variant="body2" color="text.secondary">{item.content}</Typography>
+                  </Paper>
+                </TimelineContent>
+              </TimelineItem>
+            ))}
+          </Timeline>
         </section>
-
         {/* Vision */}
         <section id="vision">
           <h3 className="text-3xl font-semibold mb-6 border-b pb-2">Vision</h3>
