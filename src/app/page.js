@@ -1,6 +1,6 @@
-// pages/index.js
+import { getExperience } from '../lib/getExperience';
 import Head from 'next/head'
-import { SiC, SiPython, SiRuby, SiGo, SiReact, SiVuedotjs, SiMysql, SiPostgresql, SiSupabase, SiAmazon, SiCloudflare, SiDocker } from 'react-icons/si'
+import { SiC, SiPython, SiRuby, SiGo, SiReact,SiFlask, SiVuedotjs, SiMysql, SiPostgresql, SiSupabase, SiAmazon, SiCloudflare, SiDocker, SiSqlite, SiSqlalchemy, SiGithub, SiRubyonrails, SiRubysinatra, SiGithubactions, SiRaspberrypi} from 'react-icons/si'
 import {
   Timeline,
   TimelineItem,
@@ -11,17 +11,19 @@ import {
 } from '@mui/lab';
 import { Typography, Paper } from '@mui/material';
 
-export default function Home() {
+export default async function Home() {
+  const experience = await getExperience(); // ← サーバーで取得
+
   return (
     <div className="min-h-screen bg-white text-gray-900">
       <Head>
-        <title>渋谷 圭亮 | Portfolio</title>
-        <meta name="description" content="渋谷圭亮のポートフォリオサイト" />
+        <title>Cercil's Portfolio</title>
+        <meta name="description" content="cercil's portfolio" />
       </Head>
 
       <header className="sticky top-0 bg-white shadow z-10">
         <div className="max-w-4xl mx-auto flex items-center justify-between py-4 px-6">
-          <h1 className="text-2xl font-extrabold">渋谷 圭亮</h1>
+          <h1 className="text-2xl font-extrabold">Keisuke Shibuya</h1>
           <nav className="space-x-6 text-lg">
             <a href="#about" className="hover:text-blue-600">About</a>
             <a href="#education" className="hover:text-blue-600">Education</a>
@@ -35,8 +37,8 @@ export default function Home() {
       <main className="max-w-4xl mx-auto space-y-16 py-12 px-6">
         {/* Hero */}
         <section id="about" className="text-center space-y-4">
-          <p className="text-sm uppercase tracking-widest text-gray-500">Backend Engineer / Aspiring CTO</p>
-          <h2 className="text-5xl font-bold">渋谷 圭亮</h2>
+          <p className="text-sm uppercase tracking-widest text-gray-500">Backend Engineer / Student</p>
+          <h2 className="text-5xl font-bold">Keisuke Shibuya</h2>
         </section>
 
         {/* Education */}
@@ -53,7 +55,7 @@ export default function Home() {
             </li>
             <li className="flex items-start">
               <time className="text-gray-500 w-24">2025 - Present</time>
-              <p>信州大学大学院 総合理工研究科 工学専攻</p>
+              <p>信州大学大学院 総合理工研究科 工学専攻 情報数理・融合システム分野</p>
             </li>
           </ul>
         </section>
@@ -97,11 +99,15 @@ export default function Home() {
                   <span>Vue</span>
                 </div>
                 <div className="flex flex-col items-center text-center">
-                  <SiRuby size={36} />
+                  <SiRubyonrails size={36} />
                   <span>Rails</span>
                 </div>
                 <div className="flex flex-col items-center text-center">
-                  <SiPython size={36} />
+                  <SiRubysinatra size={36} />
+                  <span>Sinatra</span>
+                </div>
+                <div className="flex flex-col items-center text-center">
+                  <SiFlask size={36} />
                   <span>Flask</span>
                 </div>
               </div>
@@ -117,6 +123,10 @@ export default function Home() {
                 <div className="flex flex-col items-center text-center">
                   <SiPostgresql size={36} />
                   <span>PostgreSQL</span>
+                </div>
+                <div className="flex flex-col items-center text-center">
+                  <SiSqlite size={36} />
+                  <span>SQLite</span>
                 </div>
                 <div className="flex flex-col items-center text-center">
                   <SiSupabase size={36} />
@@ -136,49 +146,65 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            {/* Tools */}
+            <div>
+              <h4 className="text-2xl font-medium mb-4">Tools</h4>
+              <div className="flex flex-wrap gap-8">
+                <div className="flex flex-col items-center text-center">
+                  <SiSqlalchemy size={36} />
+                  <span>SQLAlchemy</span>
+                </div>
+                <div className="flex flex-col items-center text-center">
+                  <SiGithub size={36} />
+                  <span>GitHub</span>
+                </div>
+                <div className="flex flex-col items-center text-center">
+                  <SiGithubactions size={36} />
+                  <span>GitHubActions</span>
+                </div>
+                <div className="flex flex-col items-center text-center">
+                  <SiRaspberrypi size={36} />
+                  <span>RaspberryPi</span>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
         <section id="experience" className="my-16">
           <h3 className="text-3xl font-semibold mb-8 border-b pb-2">Experience & Career</h3>
-          <Timeline align="left">
-            {[
-              {
-                date: "2023.02",
-                title: "PR TIMES HACKATHON",
-                content: "3日間でDreamSinkを開発 (Flask, PostgreSQL)。仕様書作成・要件定義を主導。"
-              },
-              {
-                date: "2023.04",
-                title: "チーム開発 継続",
-                content: "DreamSinkの機能拡張、継続開発、デプロイ環境構築。"
-              },
-              {
-                date: "2024.09",
-                title: "ShinBizForum 設立",
-                content: "学生間で互いを刺激し合うコミュニティ運営、勉強会・活動を定期開催。"
-              }
-            ].map((item, i, arr) => (
+          <Timeline position="alternate">
+            {experience.map((item, i) => (
               <TimelineItem key={item.date}>
+                {item.side === 'left' && (
+                  <TimelineOppositeContent sx={{ pr: 2 }}>
+                    <Typography variant="body2" color="text.secondary">
+                      {item.date}
+                    </Typography>
+                  </TimelineOppositeContent>
+                )}
                 <TimelineSeparator>
                   <TimelineDot sx={{ bgcolor: '#3b82f6' }} />
-                  {i !== arr.length - 1 && <TimelineConnector />}
+                  {i !== experience.length - 1 && <TimelineConnector />}
                 </TimelineSeparator>
-
-                <TimelineContent sx={{ ml: 2, py: 2 }}>
-                  <Typography variant="body2" color="textSecondary" sx={{ mb: 1 }}>
-                    {item.date}
-                  </Typography>
+                <TimelineContent sx={{ py: 2 }}>
+                  {item.side === 'right' && (
+                    <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
+                      {item.date}
+                    </Typography>
+                  )}
                   <Paper
-                    elevation={1}
+                    elevation={0}
                     sx={{
                       p: 3,
-                      minHeight: '120px',
-                      width: '100%',
-                      maxWidth: '480px',
-                      bgcolor: '#fff',
+                      border: '1px solid #e5e7eb',
                       borderRadius: 2,
-                      boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.05)'
+                      boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
+                      transition: 'box-shadow 0.3s ease, transform 0.3s ease',
+                      '&:hover': {
+                        boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+                        transform: 'translateY(-2px)',
+                      },
                     }}
                   >
                     <Typography variant="h6" sx={{ mb: 1 }}>{item.title}</Typography>
