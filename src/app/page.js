@@ -21,7 +21,7 @@ const frameworks = [
   { icon: SiVuedotjs, label: 'Vue' },
   { icon: SiRubyonrails, label: 'Rails' },
   { icon: SiRubysinatra, label: 'Sinatra' },
-  { icon: SiFlask, label: 'Flask' },$
+  { icon: SiFlask, label: 'Flask' },
 ];
 
 const infra = [
