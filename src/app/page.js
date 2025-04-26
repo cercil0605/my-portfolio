@@ -1,5 +1,4 @@
 import { getExperience } from '../lib/getExperience';
-import Head from 'next/head';
 import {
   SiC, SiPython, SiRuby, SiGo, SiReact, SiFlask, SiVuedotjs, SiMysql,
   SiPostgresql, SiSupabase, SiAmazon, SiCloudflare, SiDocker, SiSqlite,
