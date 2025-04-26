@@ -54,7 +54,7 @@ export function TimelineSection({ experience }) {
               }
               label={
                   <Typography fontSize={20} fontWeight="bold" pl={2}>
-                      {engineerMode ? "Engineer " : "Show All"}
+                      {"Engineer Mode "}
                   </Typography>
                   }
           />
