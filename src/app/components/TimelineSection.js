@@ -7,6 +7,7 @@ import {
 import { Typography, Paper, useMediaQuery, useTheme, Switch, Box, FormControlLabel } from '@mui/material';
 import { useState } from 'react';
 import { MobileCardTimeline } from './MobileCardTimeline';
+import { DesktopCardTimeline } from './DesktopCardTimeline';
 
 // parse json
 function parseDate(dateStr) {
@@ -37,10 +38,6 @@ export function TimelineSection({ experience }) {
     const compare = parseDate(a.date) - parseDate(b.date);
     return isReverse ? compare : -compare;
   });
-    // switch mobile mode
-  if (isMobile) {
-    return <MobileCardTimeline experience={sortedExperience} />;
-  }
   // pc mode
   return (
       <Box>
@@ -81,45 +78,8 @@ export function TimelineSection({ experience }) {
                   }
           />
         </Box>
-
         {/* Timeline */}
-        <Timeline position="alternate">
-          {sortedExperience.map((item, i, arr) => (
-              <TimelineItem key={item.date + item.title}>
-                <TimelineSeparator>
-                  <TimelineDot sx={{ bgcolor: '#222' }} />
-                  {i !== arr.length - 1 && <TimelineConnector />}
-                </TimelineSeparator>
-                <TimelineContent sx={{ py: 2 }}>
-                  <Typography variant="body2" color="textSecondary" sx={{ mb: 1 }}>
-                    {item.date}
-                  </Typography>
-                  <Paper
-                      elevation={1}
-                      sx={{
-                        p: 2,
-                        bgcolor: '#fff',
-                        border: '1.5px solid #ccc',
-                        borderRadius: 2,
-                        transition: 'all 0.3s ease',
-                        '&:hover': {
-                          boxShadow: 6,
-                          transform: 'translateY(-4px)',
-                        },
-                        textAlign: "left"
-                      }}
-                  >
-                    <Typography variant="h6" sx={{ mb: 1 }}>
-                      {item.title}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      {item.content}
-                    </Typography>
-                  </Paper>
-                </TimelineContent>
-              </TimelineItem>
-          ))}
-        </Timeline>
+        { isMobile ? <MobileCardTimeline experience={sortedExperience} /> : <DesktopCardTimeline experience={sortedExperience} />}
       </Box>
   );
 }
