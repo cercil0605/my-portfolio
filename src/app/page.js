@@ -1,9 +1,11 @@
 import { getExperience } from '../lib/getExperience';
+import { FaGithub } from 'react-icons/fa';
 import {
   SiC, SiPython, SiRuby, SiGo, SiReact, SiFlask, SiVuedotjs, SiMysql,
   SiPostgresql, SiSupabase, SiAmazon, SiCloudflare, SiDocker, SiSqlite,
-  SiSqlalchemy, SiGithub, SiRubyonrails, SiRubysinatra, SiGithubactions, SiRaspberrypi, SiJavascript
+  SiSqlalchemy, SiGithub, SiRubyonrails, SiRubysinatra, SiGithubactions, SiRaspberrypi, SiJavascript,SiZenn, SiWantedly
 } from 'react-icons/si';
+import { HiOutlineMail } from 'react-icons/hi'; // メール用（オプション）
 import { TimelineSection } from './components/TimelineSection';
 
 const languages = [
@@ -118,14 +120,54 @@ export default async function Home() {
           <TimelineSection experience={experience} />
         </section>
         {/* contact */}
-        <section id="contact" className="text-center pt-12 text-[#555] space-y-2">
-          <h3 className="text-3xl font-extrabold mb-6 border-black pb-2">Interested in working together?</h3>
-          <a
-            href="mailto:support@cercil.net"
-            className="inline-block bg-black text-white px-6 py-2 rounded-md font-semibold hover:bg-gray-800 transition"
-          >
-            ✉️ support@cercil.net
-          </a>
+        <section id="contact" className="text-center pt-12 text-[#555] space-y-6">
+          <h3 className="text-3xl font-extrabold mb-6 border-black pb-2">
+            Interested in working together?
+          </h3>
+          {/* contact tools */}
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+            {/* Email */}
+            <a
+                href="mailto:support@cercil.net"
+                className="w-64 h-14 flex items-center justify-center gap-2 bg-black text-white rounded-md font-semibold hover:bg-gray-800 transition"
+            >
+              <HiOutlineMail size={24} />
+              Email
+            </a>
+
+            {/* GitHub */}
+            <a
+                href="https://github.com/your-github-username"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-64 h-14 flex items-center justify-center gap-2 bg-black text-white rounded-md font-semibold hover:bg-gray-800 transition"
+            >
+              <FaGithub size={24} />
+              GitHub
+            </a>
+
+            {/* Zenn */}
+            <a
+                href="https://zenn.dev/your-zenn-username"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-64 h-14 flex items-center justify-center gap-2 bg-black text-white rounded-md font-semibold hover:bg-gray-800 transition"
+            >
+              <SiZenn size={24} />
+              Zenn
+            </a>
+
+            {/* Wantedly */}
+            <a
+                href="https://www.wantedly.com/id/your-wantedly-id"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-64 h-14 flex items-center justify-center gap-2 bg-black text-white rounded-md font-semibold hover:bg-gray-800 transition"
+            >
+              <SiWantedly size={24} />
+              Wantedly
+            </a>
+          </div>
         </section>
         {/* Footer */}
         <section id="footer" className="text-center pt-12 text-[#555]">

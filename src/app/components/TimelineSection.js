@@ -34,7 +34,6 @@ export function TimelineSection({ experience }) {
     const compare = parseDate(a.date) - parseDate(b.date);
     return isReverse ? compare : -compare;
   });
-  // pc mode
   return (
       <Box>
         {/* Switch */}
@@ -74,7 +73,7 @@ export function TimelineSection({ experience }) {
                   }
           />
         </Box>
-        {/* Timeline */}
+        {/* Timeline PC or Mobile */}
         { isMobile ? <MobileCardTimeline experience={sortedExperience} /> : <DesktopCardTimeline experience={sortedExperience} />}
       </Box>
   );
