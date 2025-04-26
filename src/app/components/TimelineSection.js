@@ -1,10 +1,6 @@
 'use client';
 
-import {
-  Timeline, TimelineItem, TimelineSeparator, TimelineConnector,
-  TimelineContent, TimelineDot
-} from '@mui/lab';
-import { Typography, Paper, useMediaQuery, useTheme, Switch, Box, FormControlLabel } from '@mui/material';
+import { Typography, useMediaQuery, useTheme, Switch, Box, FormControlLabel } from '@mui/material';
 import { useState } from 'react';
 import { MobileCardTimeline } from './MobileCardTimeline';
 import { DesktopCardTimeline } from './DesktopCardTimeline';
