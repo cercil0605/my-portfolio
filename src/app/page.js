@@ -46,11 +46,6 @@ export default async function Home() {
 
   return (
     <div className="min-h-screen bg-[#f4f4f4] text-[#222] font-sans">
-      <Head>
-        <title>Cercil's Portfolio</title>
-        <meta name="description" content="cercil's portfolio" />
-      </Head>
-
       {/* Header */}
       <header className="sticky top-0 bg-white shadow z-10">
         <div className="max-w-4xl mx-auto flex items-center justify-between py-4 px-6">
