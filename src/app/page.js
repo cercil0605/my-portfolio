@@ -137,7 +137,7 @@ export default async function Home() {
 
             {/* GitHub */}
             <a
-                href="https://github.com/your-github-username"
+                href="https://github.com/cercil0605"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-64 h-14 flex items-center justify-center gap-2 bg-black text-white rounded-md font-semibold hover:bg-gray-800 transition"
@@ -148,7 +148,7 @@ export default async function Home() {
 
             {/* Zenn */}
             <a
-                href="https://zenn.dev/your-zenn-username"
+                href="https://zenn.dev/cercil"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-64 h-14 flex items-center justify-center gap-2 bg-black text-white rounded-md font-semibold hover:bg-gray-800 transition"
@@ -159,7 +159,7 @@ export default async function Home() {
 
             {/* Wantedly */}
             <a
-                href="https://www.wantedly.com/id/your-wantedly-id"
+                href="https://www.wantedly.com/id/krg_cer"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-64 h-14 flex items-center justify-center gap-2 bg-black text-white rounded-md font-semibold hover:bg-gray-800 transition"
