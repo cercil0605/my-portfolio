@@ -8,7 +8,7 @@ import { Typography, Paper, useMediaQuery, useTheme, Switch, Box, FormControlLab
 import { useState } from 'react';
 import { MobileCardTimeline } from './MobileCardTimeline';
 
-// 🔥 dateパース関数
+// parse json
 function parseDate(dateStr) {
   const [startRaw] = dateStr.split(' - ');
   if (startRaw.includes('Present')) return Infinity;
@@ -106,6 +106,7 @@ export function TimelineSection({ experience }) {
                           boxShadow: 6,
                           transform: 'translateY(-4px)',
                         },
+                        textAlign: "left"
                       }}
                   >
                     <Typography variant="h6" sx={{ mb: 1 }}>
