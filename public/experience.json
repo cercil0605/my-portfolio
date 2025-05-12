@@ -1,15 +1,52 @@
 [
   {
+    "date": "2025.04 - Present",
+    "title": "🧑‍💻 自己管理Bot「Taskara」の開発",
+    "content": "自己管理が自分，または周囲で共通の課題になっていたので，それを解決するDiscordBotの開発を行ってます．LLMを用いてAIコーチがタスクの状況を管理して，フィードバックをくれるというものです．まだまだ実装段階であり，将来的にはAIエージェントを導入してプロダクトとしてリリース予定です．",
+    "tags": ["engineer"],
+    "links": [
+      {
+        "type": "github",
+        "label": "GitHub",
+        "url": "https://github.com/cercil0605/self-management-bot-layerd"
+      }
+    ]
+  },
+  {
     "date": "2025.02 - 2025.04",
     "title": "🧑‍💻 DreamSinkのチーム開発",
     "content": "ハッカソンの延長として、チーム開発を行なった。",
-    "tags": ["engineer"]
+    "tags": ["engineer"],
+    "links": [
+      {
+        "type": "github",
+        "label": "GitHub",
+        "url": "https://github.com/JS-Ninjaaaa/dream-base"
+      },
+      {
+        "type": "article",
+        "label": "Zenn",
+        "url": "https://zenn.dev/cercil/articles/e11a7488891f59"
+      }
+    ]
   },
   {
     "date": "2025.02",
     "title": "🧑‍💻 PRTIMES HACKATHON 2025",
     "content": "夢のメモ帳SNS「DreamSink」を開発。",
-    "tags": ["engineer"]
+    "tags": ["engineer"],
+    "links": [
+      {
+        "type": "github",
+        "label": "GitHub",
+        "url": "https://github.com/JS-Ninjaaaa/dream-base"
+      },
+      {
+        "type": "article",
+        "label": "Zenn",
+        "url": "https://zenn.dev/cercil/articles/e11a7488891f59"
+      }
+    ]
   },
   {
     "date": "2025.01 - 2025.04",
@@ -21,7 +58,14 @@
     "date": "2024.09 - Present",
     "title": "🏫 大学施設向け予約システムの開発",
     "content": "本学で施設を予約しようとした際に、手間が多く・管理が煩雑なため、1つのWebアプリケーションに完結させるシステムを開発しました。今後実用に向けて相談しております。",
-    "tags": ["engineer"]
+    "tags": ["engineer"],
+    "links": [
+      {
+        "type": "github",
+        "label": "GitHub",
+        "url": "https://github.com/cercil0605/dx_gym2"
+      }
+    ]
   },
   {
     "date": "2024.10 - Present",

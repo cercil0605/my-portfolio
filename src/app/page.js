@@ -1,5 +1,5 @@
 import { getExperience } from '../lib/getExperience';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub,FaAws } from 'react-icons/fa';
 import {
   SiC, SiPython, SiRuby, SiGo, SiReact, SiFlask, SiVuedotjs, SiMysql,
   SiPostgresql, SiSupabase, SiAmazon, SiCloudflare, SiDocker, SiSqlite,
@@ -30,7 +30,7 @@ const infra = [
   { icon: SiPostgresql, label: 'PostgreSQL' },
   { icon: SiSqlite, label: 'SQLite' },
   { icon: SiSupabase, label: 'Supabase' },
-  { icon: SiAmazon, label: 'AWS' },
+  { icon: FaAws, label: 'AWS' },
   { icon: SiCloudflare, label: 'Cloudflare' },
   { icon: SiDocker, label: 'Docker' },
 ];
