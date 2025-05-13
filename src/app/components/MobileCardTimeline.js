@@ -1,8 +1,11 @@
 'use client';
 
 import { Box, Typography, Paper } from '@mui/material';
+import ExperienceModal from './ExperienceModal';
+import {useState} from "react";
 
 export function MobileCardTimeline({ experience }) {
+    const [selected, setSelected] = useState(null);
   return (
     <Box
       display="flex"
@@ -28,6 +31,7 @@ export function MobileCardTimeline({ experience }) {
         <Paper
           key={item.date}
           elevation={1}
+          onClick={() => setSelected(item)}
           sx={{
             width: '90%',
             p: 2,
@@ -66,6 +70,12 @@ export function MobileCardTimeline({ experience }) {
           </Typography>
         </Paper>
       ))}
+        <ExperienceModal
+            open={Boolean(selected)}
+            onClose={() => setSelected(null)}
+            experience={selected}
+        />
     </Box>
+
   );
 }
