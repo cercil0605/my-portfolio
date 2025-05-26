@@ -2,7 +2,7 @@ import { getExperience } from '../lib/getExperience';
 import { FaGithub,FaAws } from 'react-icons/fa';
 import {
   SiC, SiPython, SiRuby, SiGo, SiReact, SiFlask, SiVuedotjs, SiMysql,
-  SiPostgresql, SiSupabase, SiAmazon, SiCloudflare, SiDocker, SiSqlite,
+  SiPostgresql, SiSupabase, SiCloudflare, SiDocker, SiSqlite,
   SiSqlalchemy, SiGithub, SiRubyonrails, SiRubysinatra, SiGithubactions, SiRaspberrypi, SiJavascript,SiZenn, SiWantedly
 } from 'react-icons/si';
 import { HiOutlineMail } from 'react-icons/hi'; // メール用（オプション）
