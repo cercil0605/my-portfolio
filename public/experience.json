@@ -1,14 +1,19 @@
 [
   {
     "date": "2025.05",
-    "title": "🧑‍💻 技育CAMPハッカソン vol.3 で努力賞を受賞]",
-    "content": "DreamSink開発メンバらと参加し，技術面接対策AIツール「RepoInterviewer」を開発しました．4キャラクターのAIが使用者のコードを見て技術面接を会話形式で行う，VSCode拡張機能として実装しました．",
+    "title": "🧑‍💻 技育CAMPハッカソン vol.3 で努力賞を受賞",
+    "content": "DreamSink開発メンバーと参加し、技術面接対策AIツール「RepoInterviewer」を開発しました。4キャラクターのAIが使用者のコードを見て技術面接を会話形式で行う、VSCode拡張機能として実装しました。今後継続開発を行い、技育博にて展示する予定です。",
     "tags": ["engineer"],
     "links": [
       {
         "type": "github",
         "label": "GitHub",
         "url": "https://github.com/JS-Ninjaaaa/RepoInterviewer"
+      },
+      {
+        "type": "X",
+        "label": "X",
+        "url": "https://x.com/geek_pjt/status/1926569423910875264"
       }
     ]
   },

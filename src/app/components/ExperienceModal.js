@@ -1,4 +1,5 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
+import XIcon from '@mui/icons-material/X';
 import ArticleIcon from '@mui/icons-material/Article';
 import LaunchIcon from '@mui/icons-material/Launch';
 import { Box, Typography, Modal, Link as MuiLink } from '@mui/material';
@@ -9,6 +10,8 @@ function renderIcon(type) {
             return <GitHubIcon fontSize="small" sx={{ mr: 0.5 }} />;
         case 'article':
             return <ArticleIcon fontSize="small" sx={{ mr: 0.5 }} />;
+        case 'X':
+            return <XIcon fontSize="small" sx={{ mr: 0.5 }} />;
         default:
             return <LaunchIcon fontSize="small" sx={{ mr: 0.5 }} />;
     }
