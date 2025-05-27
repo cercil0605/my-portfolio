@@ -1,5 +1,23 @@
 [
   {
+    "date": "2025.05",
+    "title": "🧑‍💻 技育CAMPハッカソン vol.3 で努力賞を受賞",
+    "content": "DreamSink開発メンバーと参加し、技術面接対策AIツール「RepoInterviewer」を開発しました。4キャラクターのAIが使用者のコードを見て技術面接を会話形式で行う、VSCode拡張機能として実装しました。今後継続開発を行い、技育博にて展示する予定です。",
+    "tags": ["engineer"],
+    "links": [
+      {
+        "type": "github",
+        "label": "GitHub",
+        "url": "https://github.com/JS-Ninjaaaa/RepoInterviewer"
+      },
+      {
+        "type": "X",
+        "label": "X",
+        "url": "https://x.com/geek_pjt/status/1926569423910875264"
+      }
+    ]
+  },
+  {
     "date": "2025.04 - Present",
     "title": "🧑‍💻 自己管理Bot「Taskara」の開発",
     "content": "自己管理が自分，または周囲で共通の課題になっていたので，それを解決するDiscordBotの開発を行ってます．LLMを用いてAIコーチがタスクの状況を管理して，フィードバックをくれるというものです．まだまだ実装段階であり，将来的にはAIエージェントを導入してプロダクトとしてリリース予定です．",

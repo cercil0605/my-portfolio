@@ -2,8 +2,8 @@ import { getExperience } from '../lib/getExperience';
 import { FaGithub,FaAws } from 'react-icons/fa';
 import {
   SiC, SiPython, SiRuby, SiGo, SiReact, SiFlask, SiVuedotjs, SiMysql,
-  SiPostgresql, SiSupabase, SiAmazon, SiCloudflare, SiDocker, SiSqlite,
-  SiSqlalchemy, SiGithub, SiRubyonrails, SiRubysinatra, SiGithubactions, SiRaspberrypi, SiJavascript,SiZenn, SiWantedly
+  SiPostgresql, SiSupabase, SiCloudflare, SiDocker, SiSqlite,
+  SiSqlalchemy, SiGithub, SiRubyonrails, SiRubysinatra, SiGithubactions, SiRaspberrypi, SiJavascript,SiZenn, SiWantedly, SiFastapi
 } from 'react-icons/si';
 import { HiOutlineMail } from 'react-icons/hi'; // メール用（オプション）
 import { TimelineSection } from './components/TimelineSection';
@@ -23,6 +23,7 @@ const frameworks = [
   { icon: SiRubyonrails, label: 'Rails' },
   { icon: SiRubysinatra, label: 'Sinatra' },
   { icon: SiFlask, label: 'Flask' },
+  { icon: SiFastapi, label: 'FastAPI'}
 ];
 
 const infra = [
