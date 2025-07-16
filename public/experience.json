@@ -1,5 +1,24 @@
 [
   {
+    "date": "2025.07 - Present",
+    "title": "信州大学 情報・DX推進機構にて開発プロジェクトに携わる",
+    "content": "👥 事務補佐員として所属し、大学在学時に開発した「大学施設向け予約システム」を根幹に大学の業務効率化に向けたソフトウェアの開発を行っております。",
+    "tags": ["engineer"],
+    "links": [
+      {
+        "type": "article",
+        "label": "信州大学 情報・DX推進機構",
+        "url": "https://it-initiatives.shinshu-u.ac.jp/"
+      }
+    ]
+  },
+  {
+    "date": "2025.07",
+    "title": "🎉 技育博にて「RepoInterviewer」を展示",
+    "content": "技育ハッカソンにて受賞したプロダクト「RepoInterviewer」をブラッシュアップし、展示・限定リリースいたしました。企業・学生からいただいたFBを元に現在プロダクトしており、次は本番リリースに向けて準備を進めています。",
+    "tags": ["engineer","event"]
+  },
+  {
     "date": "2025.05",
     "title": "🧑‍💻 技育CAMPハッカソン vol.3 で努力賞を受賞",
     "content": "DreamSink開発メンバーと参加し、技術面接対策AIツール「RepoInterviewer」を開発しました。4キャラクターのAIが使用者のコードを見て技術面接を会話形式で行う、VSCode拡張機能として実装しました。今後継続開発を行い、技育博にて展示する予定です。",
