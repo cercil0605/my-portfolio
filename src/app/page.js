@@ -3,7 +3,7 @@ import { FaGithub,FaAws } from 'react-icons/fa';
 import {
   SiC, SiPython, SiRuby, SiGo, SiReact, SiFlask, SiVuedotjs, SiMysql,
   SiPostgresql, SiSupabase, SiCloudflare, SiDocker, SiSqlite,
-  SiSqlalchemy, SiGithub, SiRubyonrails, SiRubysinatra, SiGithubactions, SiRaspberrypi, SiJavascript,SiZenn, SiWantedly, SiFastapi
+  SiSqlalchemy, SiGithub, SiRubyonrails, SiRubysinatra, SiGithubactions, SiRaspberrypi, SiJavascript,SiZenn, SiWantedly, SiFastapi,SiGooglecloud
 } from 'react-icons/si';
 import { HiOutlineMail } from 'react-icons/hi'; // メール用（オプション）
 import { TimelineSection } from './components/TimelineSection';
@@ -32,6 +32,7 @@ const infra = [
   { icon: SiSqlite, label: 'SQLite' },
   { icon: SiSupabase, label: 'Supabase' },
   { icon: FaAws, label: 'AWS' },
+  { icon: SiGooglecloud, label: 'GoogleCloud' },
   { icon: SiCloudflare, label: 'Cloudflare' },
   { icon: SiDocker, label: 'Docker' },
 ];
