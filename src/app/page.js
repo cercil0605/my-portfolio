@@ -1,9 +1,9 @@
 import { getExperience } from '../lib/getExperience';
-import { FaGithub,FaAws } from 'react-icons/fa';
+import { FaGithub, FaAws } from 'react-icons/fa';
 import {
   SiC, SiPython, SiRuby, SiGo, SiReact, SiFlask, SiVuedotjs, SiMysql,
   SiPostgresql, SiSupabase, SiCloudflare, SiDocker, SiSqlite,
-  SiSqlalchemy, SiGithub, SiRubyonrails, SiRubysinatra, SiGithubactions, SiRaspberrypi, SiJavascript,SiZenn, SiWantedly, SiFastapi,SiGooglecloud
+  SiSqlalchemy, SiGithub, SiRubyonrails, SiRubysinatra, SiGithubactions, SiRaspberrypi, SiJavascript, SiZenn, SiWantedly, SiFastapi, SiGooglecloud
 } from 'react-icons/si';
 import { HiOutlineMail } from 'react-icons/hi'; // メール用（オプション）
 import { TimelineSection } from './components/TimelineSection';
@@ -13,7 +13,7 @@ const languages = [
   { icon: SiPython, label: 'Python' },
   { icon: SiRuby, label: 'Ruby' },
   { icon: SiGo, label: 'Go' },
-  { icon: SiJavascript, label: 'JavaScript'}
+  { icon: SiJavascript, label: 'JavaScript' }
 
 ];
 
@@ -23,7 +23,7 @@ const frameworks = [
   { icon: SiRubyonrails, label: 'Rails' },
   { icon: SiRubysinatra, label: 'Sinatra' },
   { icon: SiFlask, label: 'Flask' },
-  { icon: SiFastapi, label: 'FastAPI'}
+  { icon: SiFastapi, label: 'FastAPI' }
 ];
 
 const infra = [
@@ -85,7 +85,7 @@ export default async function Home() {
             </div>
             <div className="grid grid-cols-[10ch_auto] gap-x-4">
               <span className="text-sm text-gray-600">2025 - Present</span>
-              <p className="text-base text-[#222] font-medium">信州大学大学院 総合理工研究科 工学専攻 情報数理・融合システム分野</p>
+              <p className="text-base text-[#222] font-medium">信州大学大学院 総合理工学研究科 工学専攻 情報数理・融合システム分野</p>
             </div>
           </div>
         </section>
@@ -96,21 +96,21 @@ export default async function Home() {
 
           <div className="space-y-12">
             {[{ title: 'Programming Languages', items: languages },
-              { title: 'Frameworks', items: frameworks },
-              { title: 'Databases & Infra', items: infra },
-              { title: 'Tools', items: tools }].map(({ title, items }) => (
-                <div key={title}>
-                  <h4 className="text-xl font-semibold mb-4 border-l-4 border-black pl-2">{title}</h4>
-                  <div className="flex flex-wrap gap-6">
-                    {items.map(({ icon: Icon, label }, i) => (
-                      <div key={i} className="flex flex-col items-center text-center w-24">
-                        <Icon size={36} />
-                        <span className="text-sm font-semibold text-[#333] mt-2">{label}</span>
-                      </div>
-                    ))}
-                  </div>
+            { title: 'Frameworks', items: frameworks },
+            { title: 'Databases & Infra', items: infra },
+            { title: 'Tools', items: tools }].map(({ title, items }) => (
+              <div key={title}>
+                <h4 className="text-xl font-semibold mb-4 border-l-4 border-black pl-2">{title}</h4>
+                <div className="flex flex-wrap gap-6">
+                  {items.map(({ icon: Icon, label }, i) => (
+                    <div key={i} className="flex flex-col items-center text-center w-24">
+                      <Icon size={36} />
+                      <span className="text-sm font-semibold text-[#333] mt-2">{label}</span>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+            ))}
           </div>
         </section>
 
@@ -130,8 +130,8 @@ export default async function Home() {
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             {/* Email */}
             <a
-                href="mailto:support@cercil.net"
-                className="w-64 h-14 flex items-center justify-center gap-2 bg-black text-white rounded-md font-semibold hover:bg-gray-800 transition"
+              href="mailto:support@cercil.net"
+              className="w-64 h-14 flex items-center justify-center gap-2 bg-black text-white rounded-md font-semibold hover:bg-gray-800 transition"
             >
               <HiOutlineMail size={24} />
               Email
@@ -139,10 +139,10 @@ export default async function Home() {
 
             {/* GitHub */}
             <a
-                href="https://github.com/cercil0605"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-64 h-14 flex items-center justify-center gap-2 bg-black text-white rounded-md font-semibold hover:bg-gray-800 transition"
+              href="https://github.com/cercil0605"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-64 h-14 flex items-center justify-center gap-2 bg-black text-white rounded-md font-semibold hover:bg-gray-800 transition"
             >
               <FaGithub size={24} />
               GitHub
@@ -150,10 +150,10 @@ export default async function Home() {
 
             {/* Zenn */}
             <a
-                href="https://zenn.dev/cercil"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-64 h-14 flex items-center justify-center gap-2 bg-black text-white rounded-md font-semibold hover:bg-gray-800 transition"
+              href="https://zenn.dev/cercil"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-64 h-14 flex items-center justify-center gap-2 bg-black text-white rounded-md font-semibold hover:bg-gray-800 transition"
             >
               <SiZenn size={24} />
               Zenn
@@ -161,10 +161,10 @@ export default async function Home() {
 
             {/* Wantedly */}
             <a
-                href="https://www.wantedly.com/id/krg_cer"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-64 h-14 flex items-center justify-center gap-2 bg-black text-white rounded-md font-semibold hover:bg-gray-800 transition"
+              href="https://www.wantedly.com/id/krg_cer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-64 h-14 flex items-center justify-center gap-2 bg-black text-white rounded-md font-semibold hover:bg-gray-800 transition"
             >
               <SiWantedly size={24} />
               Wantedly
